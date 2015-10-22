@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+	<title>Carrier TB-PAC01 </title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class = "thermostat-container">
+        <div class = "display overlay black" id="display">
+            <div class="time-temp">
+                <div class="date">
+                    <p class="day-date-time" id="day">
+                        THURSDAY </p>
+                    <p class="day-date-time" id="date">
+                        OCT. 05</p>
+                    <p class="day-date-time" id="time">
+                        7:30 AM </p>
+                </div>
+                <div class="temp" id="temp-display-big">
+                    73 
+                </div>
+            </div>
+            <div class="program">
+                <div class="period" id="morning">
+                    <div class="period-temp" id="morning-temp">
+                        <div class = "temp">
+                            75
+                        </div> 
+                    </div>
+                    <img class = "temp-logo" src="./images/snowflake.png">
+                    <div class = "period-time">
+                        6:30 AM
+                    </div>
+                </div>
+                <div class="period" id="day">
+                    <div class="period-temp" id="day-temp">
+                        <div class = "temp">
+                            78
+                        </div> 
+                    </div>
+                    <img class = "temp-logo" src="./images/snowflake.png">
+                    <div class = "period-time">
+                        11:30 AM
+                    </div>
+                </div> 
+                <div class="period" id="eve">
+                    <div class="period-temp" id="eve-temp">
+                        <div class = "temp">
+                            72
+                        </div> 
+                    </div>
+                    <img class = "temp-logo" src="./images/fire.png">
+                    <div class = "period-time">
+                        6:30 PM
+                    </div>
+                </div>
+                <div class="period" id="night">
+                    <div class="period-temp" id="night-temp">
+                        <div class = "temp">
+                            71
+                        </div> 
+                    </div>
+                    <img class = "temp-logo" src="./images/snowflake.png">
+                    <div class = "period-time">
+                        6:30 AM
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "buttons">
+            <div class = "switch">
+                <input type = "checkbox" id="lock-switch">
+                <label><i></i></label>
+            </div>
+            <button class="soft-keys" id="program-button">PROGRAM</button>
+            <button class="soft-keys" id="set-time-button">SET TIME</button>
+            <button class="soft-keys" id="HCOFF-button">H/C/OFF</button>
+            <div id="control">
+            </div>
+            <button class="ok-button"> OK </button>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="knobKnob/transform.js"></script>
+    <script src="knobKnob/knobKnob.jquery.js"></script>
+    <script src="./js/main.js"></script>
+</body>

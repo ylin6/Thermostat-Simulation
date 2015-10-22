@@ -1,0 +1,378 @@
+
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: DINLight;
+    src: url("../fonts/DINLight.ttf");
+}
+
+html{
+    height: 100%;
+    background: linear-gradient(top, #333, #555);
+    background: -webkit-linear-gradient(top, #666, #555);
+    background: -moz-linear-gradient(top, #666, #555);
+}
+
+.thermostat-container{
+    width: 721px;
+    height: 426px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(135deg,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    border-radius: 25px;
+    padding: 50px;
+    margin-top: 100px;
+    box-shadow: -1px 7px 0 rgba(215,215,220,1.0);
+}
+
+.display{
+    width: 461px;
+    height: 328px;
+    background:url(http://myspajoy.com/wp-content/uploads/2015/01/gradient-abstract-hd-wallpaper-2560x1600-9694.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px 3px #444;
+    -webkit-box-shadow: inset 0px 0px 10px 3px #444;
+    -moz-box-shadow: inset 0px 0px 10px 3px #444;
+    -o-box-shadow: inset 0px 0px 10px 3px #444;
+    float: left;
+    z-index: 0;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+.buttons{
+    display: inline-block;
+    padding-left: 65px;
+    padding-right: 15px;
+    width: 160px;
+    margin: auto;
+    margin-top: 10px;
+} 
+
+.switch{
+    width: 100%;
+    height: 25px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.switch label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #9aee82;
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255,255,255,0.5);
+    -moz-box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255,255,255,0.5);
+    box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.switch input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.switch label i{
+    display: block;
+    height: 100%;
+    width: 25px;
+    position: absolute;
+    right:55px;
+    top: 0px;
+    z-index: 2;
+    border-radius: 50%;
+    background: #ccc; /* Fallback */
+    background:  linear-gradient(top, #999, #ccc);
+    box-shadow:
+        inset 0 1px 0 white,
+        0 0 8px rgba(0,0,0,0.3),
+        0 5px 5px rgba(0,0,0,0.2);
+}
+
+.switch label i:before {
+    content: "UNLOCKED";
+    position: absolute;
+    top: 90%;
+    right: -200%;
+    margin-top: -13px;
+    color: #666; /* Fallback */
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-family: "DinC", Helvetica, Arial, sans-serif;
+    font-size: 8px;
+}
+
+
+
+.switch input:checked ~ label { /* Background */
+    background: #F86156;
+}
+
+.switch input:checked ~ label i { /* Toggle */
+    left: auto;
+    right: -1%;
+}
+
+.switch input:checked ~ label i:before { /* On/off */
+    content: "LOCKED";
+    right: 115%;
+    color: white;
+    
+}
+
+.soft-keys{
+    background: -webkit-linear-gradient(top, #666, #555);
+    background: -moz-linear-gradient(top, #666, #555);
+    background: linear-gradient(top, #666, #555);
+    border-radius: 15px;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 25px;
+    margin: 10px 0px;
+    box-shadow: 0 3px 0 #444;
+    font-family: "DinC", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.soft-keys:active{
+    box-shadow: 0 1px 0 #444;
+}
+
+/* Knob */
+.knob{
+	width:90px;
+	height:90px;
+	position:relative;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.knob .top{
+	position:absolute;
+	top:0;
+	left:0;
+	width:90px;
+	height:90px;
+	background: -webkit-radial-gradient(top, #666, #555);
+    background: -moz-radial-gradient(top, #666, #555);
+    background: radial-gradient(top, #666, #555);
+    border-radius: 50%;
+	z-index:10;
+	cursor:pointer;
+    
+}
+
+.knob .base{
+	width:90px;
+	height:90px;
+	border-radius:50%;
+	box-shadow:0 5px 0 #111,0px 7px 2px #000;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+.knob .top:after{
+	content:url('../images/knobimage.png');
+	position:absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.knob [draggable] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.ok-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2192EB;
+    background: -webkit-radial-gradient(top, #2192EB, #1081DA);
+    background: -moz-radial-gradient(top, #2192EB,#1081DA);
+    background: radial-gradient(top, #2192EB, #1081DA);
+    border: none;
+    color: white;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    box-shadow:0 2px 1px #000;
+    position: relative;
+    top: -70px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.ok-button:active{
+    box-shadow:0 1px 1px #000;
+    background: #1081DA;
+    background: -webkit-radial-gradient(top, #1081DA, #0060C9);
+    background: -moz-radial-gradient(top, #2192EB,#0060C9);
+    background: radial-gradient(top, #2192EB, #0060C9);
+}
+
+.time-temp{
+    display: inline-block;
+    padding: 10px;
+    height: 50%;
+}
+
+.date{
+    font-family: "DINLight", Helvetica, sans-serif;
+    color: white;
+    font-size: 35px;
+    float: left;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 12px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 45px;
+}
+
+.day-date-time{
+    margin-bottom:43px;
+    padding: 0;
+}
+
+
+.temp{
+    font-family: "Rounded Elegance";
+    font-size: 146px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    float: left;
+    margin-right: auto;
+    letter-spacing: -6px;
+}
+
+
+.temp:after{
+    content: "o";
+    font-size: 20%;   
+    position: absolute;
+    margin-top: -2px;
+}
+
+.program{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.period{
+    float: left;
+    width: 25%;
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    
+}
+
+.period-temp{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border: 3.5px solid white;
+    margin: 0 auto;
+}
+
+.period-temp .temp{
+    font-family: "DINLight";
+    font-size: 28px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    display: inline;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    float: none;
+    left: -2px;
+    
+}
+
+.period-temp .temp:after{
+    content: "o";
+    font-size: 12px;
+    top: 12px;
+}
+
+.period-time{
+    font-family: "DINLight";
+    color: white;
+}
+
+.temp-logo{
+    width: 20px;
+    margin: 15px auto 20px auto;
+    
+}
+
+.overlay {
+  position: relative;
+  transition: all 0.5s;
+}
+
+.overlay:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: none;
+  z-index:0;
+  display: block;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.overlay.black:before{
+    z-index: -1;
+    background-color: rgba(10,10,10,0.2);
+}
+
+.overlay.red:before{
+    z-index: -1;
+    background-color: rgba(255, 0, 0, 0.5);
+    
+}
+
+.overlay.grey:before{
+    background: url("http://myspajoy.com/wp-content/uploads/2015/01/gradient-abstract-hd-wallpaper-2560x1600-9694.jpg");
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+	filter: grayscale(80%);
+    z-index: -1;
+}
+    
+.program.darker{
+    filter:brightness(0.1);
+    -webkit-filter:brightness(0.1);
+    -moz-filter: brightness(0.1);
+}
