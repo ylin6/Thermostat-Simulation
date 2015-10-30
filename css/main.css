@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: DINLight;
-    src: url("../fonts/DINLight.ttf");
+    src: url("../fonts/din-light.ttf");
 }
 
 html{
@@ -49,7 +49,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     -o-box-shadow: inset 0px 0px 10px 3px #444;
     float: left;
     z-index: 0;
-    text-shadow: 1px 1px 1px black;
     
 }
 
@@ -118,7 +117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     color: white;
     font-style: normal;
     font-weight: bold;
-    font-family: "DinC", Helvetica, Arial, sans-serif;
+    font-family: "DinLight", Helvetica, Arial, sans-serif;
     font-size: 8px;
 }
 
@@ -245,15 +244,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     color: white;
     font-size: 35px;
     float: left;
-    text-shadow: 0px 1px 1px black;
-    margin-top: 12px;
+    margin-top: 15px;
     font-weight: bold;
     margin-left: 25px;
     margin-right: 45px;
 }
 
 .day-date-time{
-    margin-bottom:43px;
+    margin-top: 6px;
+    margin-bottom: 5px;
     padding: 0;
 }
 
@@ -262,7 +261,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     font-family: "Rounded Elegance";
     font-size: 146px;
     color: white;
-    text-shadow: 1px 1px 1px black;
     float: left;
     margin-right: auto;
     letter-spacing: -6px;
@@ -302,12 +300,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .period-temp .temp{
     font-family: "DINLight";
-    font-size: 28px;
+    font-size: 23px;
     letter-spacing: 0px;
     vertical-align: middle;
     display: inline;
     position: relative;
-    top: 50%;
+    top: 38%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -319,7 +317,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .period-temp .temp:after{
     content: "o";
     font-size: 12px;
-    top: 12px;
+    top: -4px;
 }
 
 .period-time{
@@ -329,7 +327,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .temp-logo{
     width: 20px;
-    margin: 15px auto 20px auto;
+    margin: 15px auto 13px auto;
     
 }
 
@@ -376,3 +374,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     -webkit-filter:brightness(0.1);
     -moz-filter: brightness(0.1);
 }
+
+.set-time{
+    text-align: center;
+    font-size: 80px;
+    width: 100%;
+    font-family: "DINLight";
+    color: white;
+    margin-top:-10px;
+
+}
+
+#set-time-min{
+    margin-left: -30px;
+}
+
+#set-time-colon{
+    position: relative;
+    left: -20px;
+    top: -10px;
+}
+
+.state{
+    height: 100%;
+}
+
+#state1{
+    display: none;
+}
+
+.blinker{
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+    50% {
+        opacity: 0.0
+    }
+}
+    

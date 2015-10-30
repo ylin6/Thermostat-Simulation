@@ -7,63 +7,78 @@
 <body>
     <div class = "thermostat-container">
         <div class = "display overlay black" id="display">
-            <div class="time-temp">
-                <div class="date">
-                    <p class="day-date-time" id="day">
-                        THURSDAY </p>
-                    <p class="day-date-time" id="date">
-                        OCT. 05</p>
-                    <p class="day-date-time" id="time">
-                        7:30 AM </p>
+            <div class="state" id="state0">
+                <div class="time-temp">
+                    <div class="date">
+                        <p class="day-date-time" id="day">
+                            THURSDAY </p>
+                        <p class="day-date-time" id="date">
+                            OCT. 05</p>
+                        <p class="day-date-time" id="time">
+                            7:30 AM </p>
+                    </div>
+                    <div class="temp" id="temp-display-big">
+                        73 
+                    </div>
                 </div>
-                <div class="temp" id="temp-display-big">
-                    73 
+                <div class="program">
+                    <div class="period" id="morning">
+                        <div class="period-temp" id="morning-temp">
+                            <div class = "temp">
+                                75
+                            </div> 
+                        </div>
+                        <img class = "temp-logo" src="./images/snowflake.png">
+                        <div class = "period-time">
+                            6:30 AM
+                        </div>
+                    </div>
+                    <div class="period" id="day">
+                        <div class="period-temp" id="day-temp">
+                            <div class = "temp">
+                                78
+                            </div> 
+                        </div>
+                        <img class = "temp-logo" src="./images/snowflake.png">
+                        <div class = "period-time">
+                            11:30 AM
+                        </div>
+                    </div> 
+                    <div class="period" id="eve">
+                        <div class="period-temp" id="eve-temp">
+                            <div class = "temp">
+                                72
+                            </div> 
+                        </div>
+                        <img class = "temp-logo" src="./images/fire.png">
+                        <div class = "period-time">
+                            6:30 PM
+                        </div>
+                    </div>
+                    <div class="period" id="night">
+                        <div class="period-temp" id="night-temp">
+                            <div class = "temp">
+                                71
+                            </div> 
+                        </div>
+                        <img class = "temp-logo" src="./images/snowflake.png">
+                        <div class = "period-time">
+                            6:30 AM
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="program">
-                <div class="period" id="morning">
-                    <div class="period-temp" id="morning-temp">
-                        <div class = "temp">
-                            75
-                        </div> 
-                    </div>
-                    <img class = "temp-logo" src="./images/snowflake.png">
-                    <div class = "period-time">
-                        6:30 AM
+            <div class="state" id="state1">
+                <div class="time-temp">
+                    <div class="date"> 
+                        <p class="day-date-time"> SET TIME</p>
                     </div>
                 </div>
-                <div class="period" id="day">
-                    <div class="period-temp" id="day-temp">
-                        <div class = "temp">
-                            78
-                        </div> 
-                    </div>
-                    <img class = "temp-logo" src="./images/snowflake.png">
-                    <div class = "period-time">
-                        11:30 AM
-                    </div>
-                </div> 
-                <div class="period" id="eve">
-                    <div class="period-temp" id="eve-temp">
-                        <div class = "temp">
-                            72
-                        </div> 
-                    </div>
-                    <img class = "temp-logo" src="./images/fire.png">
-                    <div class = "period-time">
-                        6:30 PM
-                    </div>
-                </div>
-                <div class="period" id="night">
-                    <div class="period-temp" id="night-temp">
-                        <div class = "temp">
-                            71
-                        </div> 
-                    </div>
-                    <img class = "temp-logo" src="./images/snowflake.png">
-                    <div class = "period-time">
-                        6:30 AM
-                    </div>
+                <div class="set-time">
+                    <span  id="set-time-hour">7</span>
+                    <span  id="set-time-colon">:</span>
+                    <span  id="set-time-min"> 30</span>
+                    <span id="AMPM">AM</span>
                 </div>
             </div>
         </div>
