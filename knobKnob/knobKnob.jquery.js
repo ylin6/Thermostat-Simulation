@@ -91,9 +91,10 @@
 					
 					// This would suggest we are at an end position;
 					// we need to block further rotation.
+                    /*
 					if(Math.abs(tmp - lastDeg) > 180){
 						return false;
-					}
+					}*/
 					
 					currentDeg = tmp;
 					lastDeg = tmp;

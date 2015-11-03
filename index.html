@@ -8,7 +8,7 @@
     <div class = "thermostat-container">
         <div class = "display overlay black" id="display">
             <div class="state" id="state0">
-                <div class="time-temp">
+                <div class="uppersection" id="time-temp">
                     <div class="date">
                         <p class="day-date-time" id="day">
                             THURSDAY </p>
@@ -21,6 +21,18 @@
                         73 
                     </div>
                 </div>
+                <div class="uppersection" id="instructions">
+                    <div class="instruction-container">
+                        <p class="day-date-time">SET PROGRAMMING</p>
+                        <p class="day-date-time" id="instruction">SELECT CYCLE</p>
+                        <div class="programming-options">
+                            <span id="span1" class="grayscale">WEEKDAY</span>
+                            <span id="span2">&nbsp</span>   
+                            <span id="span3">&nbsp</span>
+                            <span id="span4">WEEKEND</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="program">
                     <div class="period" id="morning">
                         <div class="period-temp" id="morning-temp">
@@ -29,18 +41,18 @@
                             </div> 
                         </div>
                         <img class = "temp-logo" src="./images/snowflake.png">
-                        <div class = "period-time">
+                        <div class = "period-time" id="period-time-morning">
                             6:30 AM
                         </div>
                     </div>
-                    <div class="period" id="day">
+                    <div class="period" id="daytime">
                         <div class="period-temp" id="day-temp">
                             <div class = "temp">
                                 78
                             </div> 
                         </div>
                         <img class = "temp-logo" src="./images/snowflake.png">
-                        <div class = "period-time">
+                        <div class = "period-time" id = "period-time-day">
                             11:30 AM
                         </div>
                     </div> 
@@ -51,7 +63,7 @@
                             </div> 
                         </div>
                         <img class = "temp-logo" src="./images/fire.png">
-                        <div class = "period-time">
+                        <div class = "period-time" id ="period-time-eve">
                             6:30 PM
                         </div>
                     </div>
@@ -62,14 +74,14 @@
                             </div> 
                         </div>
                         <img class = "temp-logo" src="./images/snowflake.png">
-                        <div class = "period-time">
-                            6:30 AM
+                        <div class = "period-time" id="period-time-night">
+                            10:30 PM
                         </div>
                     </div>
                 </div>
             </div>
             <div class="state" id="state1">
-                <div class="time-temp">
+                <div class="uppersection">
                     <div class="date"> 
                         <p class="day-date-time"> SET TIME</p>
                     </div>

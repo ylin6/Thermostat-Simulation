@@ -8,11 +8,19 @@
     src: url("../fonts/din-light.ttf");
 }
 
+@font-face{
+    font-family: "Rounded Elegance";
+    src: url("../fonts/RoundedElegance.ttf");
+        }
+
 html{
     height: 100%;
     background: linear-gradient(top, #333, #555);
     background: -webkit-linear-gradient(top, #666, #555);
     background: -moz-linear-gradient(top, #666, #555);
+    /*
+    background: url("../images/white_wall.png");
+    background-repeat: repeat;*/
 }
 
 .thermostat-container{
@@ -153,6 +161,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     font-family: "DinC", Helvetica, Arial, sans-serif;
     cursor: pointer;
     font-size: 12px;
+    line-height: 23px;
 }
 
 .soft-keys:active{
@@ -217,12 +226,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     background: radial-gradient(top, #2192EB, #1081DA);
     border: none;
     color: white;
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-family: "DinC", Helvetica, Arial, sans-serif;
     box-shadow:0 2px 1px #000;
     position: relative;
     top: -70px;
     left: 20px;
     z-index: 1000;
+    line-height: 47px;
 }
 
 .ok-button:active{
@@ -233,7 +243,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     background: radial-gradient(top, #2192EB, #0060C9);
 }
 
-.time-temp{
+.uppersection{
     display: inline-block;
     padding: 10px;
     height: 50%;
@@ -403,6 +413,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     display: none;
 }
 
+#instructions{
+    display: none;
+    font-family: "DINLight", Helvetica, sans-serif;
+    color: white; 
+}
+
+.instruction-container{
+    font-family: "DINLight", Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#instructions{
+    font-size: 25px;
+}
+
+#instruction{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.programming-options{
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    margin-top: 40px;
+    
+}
 .blinker{
     animation: blink 1s linear infinite;
 }
@@ -412,4 +456,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         opacity: 0.0
     }
 }
+
+.grayscale{
+    opacity: 0.2;
+    filter:brightness(0.1);
+    -webkit-filter:brightness(0.1);
+    -moz-filter: brightness(0.1);
+}
+
+.program-temp{
+    font-size: 50px;
+    margin-right: -10px;
+}
+
+.program-temp:after{
+    content: "o";
+    position: relative;
+    top: -30px;
+    font-size: 18px;
+}
+    
     
