@@ -395,14 +395,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 }
 
+.set-dmdy{
+    text-align: left;
+    font-size: 50px;
+    width: 100%;
+    font-family: "DINLight";
+    color: white;
+    margin-top:-40px;
+    display: none;
+    margin-left: 35px;
+}
+    
+
 #set-time-min{
     margin-left: -30px;
 }
 
-#set-time-colon{
+.colon{
     position: relative;
     left: -20px;
-    top: -10px;
 }
 
 .state{

@@ -9,6 +9,9 @@ $(function(){
         0- Hour
         1- MIN
         2- AM/PM
+        3- DAY
+        4- Month
+        5- Date
     */
     
     /* PROGRAMMING-STATES
@@ -26,7 +29,7 @@ $(function(){
         3-NIGHT
     */
     
-    var month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    var month = ["JAN.", "FEB.", "MAR.", "APR.", "MAY.", "JUN.", "JUL.", "AUG.", "SEP.", "OCT.", "NOV.", "DEC."];
     var days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
     var lock = 0;
     var state = 0;
@@ -102,6 +105,24 @@ $(function(){
                 
                 else{
                     $('#AMPM').text("PM");
+                }
+            }
+            
+            else if (state == 1 && !lock && time_state == 3){
+                $('#set-day').text(days[Math.round(ratio*6)]);
+            }
+            
+            else if (state == 1 && !lock && time_state == 4){
+                $('#set-month').text(month[Math.round(ratio*11)]);
+            }   
+            
+            else if (state == 1 && !lock && time_state == 5){
+                if(Math.round(ratio*30 + 1) < 10){
+                     $('#set-date').text("0" + Math.round(ratio*30 + 1).toString());    
+                }
+                
+                else{
+                     $('#set-date').text(Math.round(ratio*30 + 1).toString());
                 }
             }
             
@@ -234,6 +255,41 @@ $(function(){
             }
             
             else if (time_state == 2){
+                time_state = 3;
+                var time = $('#set-time-hour').text() + ":" + $('#set-time-min').text() + " " + $('#AMPM').text();
+                $('#time').text(time);
+                $('#AMPM').removeClass("blinker");
+                $('.set-time').hide();
+                $('.set-dmdy').show();
+                $('#set-day').addClass("blinker");
+            }
+            
+            else if (time_state == 3){
+                time_state = 4;
+                $('#set-day').removeClass("blinker");
+                $('#set-month').addClass("blinker");
+            }
+            
+            else if (time_state == 4){
+                time_state = 5;
+                $('#set-month').removeClass("blinker");
+                $('#set-date').addClass("blinker");
+            }
+            
+            else if (time_state == 5){
+                time_state = 0;
+                state = 0;
+                $('#set-date').removeClass("blinker");
+                $('#state0').show(); 
+                $('#state1').hide();
+                $('.set-time').show();
+                $('.set-dmdy').hide();
+                $('#day').text($('#set-day').text());
+                $('#date').text($('#set-month').text() + " " + $('#set-date').text());
+                
+            }
+            /*
+            else if (time_state == 2){
                 time_state = 0;
                 state = 0;
                 $('#AMPM').removeClass("blinker");
@@ -241,7 +297,7 @@ $(function(){
                 $('#time').text(time);
                 $('#state0').show(); 
                 $('#state1').hide();
-            }
+            }*/
         }
         
         else if (!lock && state == 2 && (program_state == 0 || program_state == 4)){
